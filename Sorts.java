@@ -7,7 +7,7 @@ public class Sorts{
     int length = data.length;
     int first = 0;
     int second = 0;
-    for (int i = 0; i < length-1; i++) {
+    for (int i = 0; i < length; i++) {
       first = data[i];
       for (int j = i+1; i < length; j++) {
         second = data[j];
