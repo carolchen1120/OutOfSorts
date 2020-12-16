@@ -18,9 +18,16 @@ public class SortCheck{
   }
 
   public static void main(String[] arr){
-    int[] data = {1, 3, 2, 7, 5};
-    int[] answer = {1, 2, 3, 5, 7};
+    Random rand = new Random();
+    int size = rand.nextInt(100);
+    int[] data = new int[size];
+    int[] answer = new int[size];
+    for (int i = 0; i < size; i++) {
+      data[i] = rand.nextInt(10);
+    }
     bubbleSort(data);
+    answer = data;
+    Arrays.sort(data);
     System.out.println(Arrays.equals(answer, data));
   }
 }
