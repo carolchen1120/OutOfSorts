@@ -20,6 +20,22 @@ public class Sorts{
   }
 
   public static void selectionSort(int[] data){
-    
+    int length = data.length;
+    int orig = 0;
+    int smallest = 0;
+    int smolIndex = 0;
+    for (int i = 0; i < length-1; i++) {
+      orig = data[i];
+      smallest = data[i];
+      smolIndex = i;
+      for (int j = i+1; j < length; j++) {
+        if (data[j] < smallest) {
+          smallest = data[j];
+          smolIndex = j;
+        }
+      }
+      data[i] = smallest;
+      data[smolIndex] = orig;
+    }
   }
 }
