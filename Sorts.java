@@ -18,4 +18,8 @@ public class Sorts{
       }
     }
   }
+
+  public static void selectionSort(int[] data){
+    
+  }
 }
