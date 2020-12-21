@@ -44,16 +44,23 @@ public class Sorts{
     int length = data.length;
     int curr = 0;
     int nextA = 0;
-    int nextB = 0;
-    for (int i = 1; i < length; i++) {
+    for (int i = 0; i < length-1; i++) {
       curr = data[i];
-      for (int j = 0; j < i-1; j++) {
+      for (int j = 0; j < i; j++) {
         nextA = data[j];
-        nextB = data[j+1];
-        if (curr <= nextB && curr >= nextA) {
-          data[j+1] = curr;
-          for (int k = j+2; k < i; k++) {
-            data[k] = data[k-1];
+        if (curr <= nextA) {
+          if (j == 0) {
+            for (int k = i; k > 0; k--) {
+              data[k] = data[k-1];
+            }
+            data[0] = curr;
+          } else {
+            if (curr >= data[j-1]) {
+              for (int k = i; k > j; k--) {
+                data[k] = data[k-1];
+              }
+              data[j] = curr;
+            }
           }
         }
       }
