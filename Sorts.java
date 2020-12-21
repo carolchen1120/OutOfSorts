@@ -38,4 +38,10 @@ public class Sorts{
       data[smolIndex] = orig;
     }
   }
+
+
+  public static void insertionSort(int[] data){
+    
+  }
+
 }
