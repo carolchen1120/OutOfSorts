@@ -68,13 +68,13 @@ public class SortCheck{
 
 
   public static void main(String[] arr){
-    // Random rand = new Random();
-    // int size = rand.nextInt(100);
-    // int[] data = new int[size];
-    // int[] answer = new int[size];
-    // for (int i = 0; i < size; i++) {
-    //   data[i] = rand.nextInt(10);
-    // }
+    Random rand = new Random();
+    int size = rand.nextInt(100);
+    int[] data = new int[size];
+    int[] answer = new int[size];
+    for (int i = 0; i < size; i++) {
+      data[i] = rand.nextInt(10);
+    }
     // bubbleSort(data);
     // answer = data;
     // Arrays.sort(data);
@@ -85,16 +85,16 @@ public class SortCheck{
     // Arrays.sort(data);
     // System.out.println(Arrays.equals(answer, data));
 
-    int[] data = {1, 7, 3, 6, 4};
-    int[] answer = new int[5];
+    // int[] data = {1, 7, 3, 6, 4};
+    // int[] answer = new int[5];
 
     insertionSort(data);
     answer = data;
     Arrays.sort(data);
-    // System.out.println(Arrays.equals(answer, data));
+    System.out.println(Arrays.equals(answer, data));
 
-    for (int i = 0; i < 5; i++) {
-      System.out.println(answer[i]);
-    }
+    // for (int i = 0; i < 5; i++) {
+    //   System.out.println(answer[i]);
+    // }
   }
 }
